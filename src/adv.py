@@ -80,12 +80,12 @@ while True:
             print(
                 f'\n{Colors.OKGREEN}*** Created New Player ***\n\n{player}\n\n{Colors.ENDC}')
             currentRoom = get_key(player.location)
-            print(
-                f'{Colors.UNDERLINE}{Colors.WARNING}Current Location: {room[currentRoom].name}{Colors.ENDC}')
     # adventure game starts
     else:
         try:
             # initial prompt
+            print(
+                f'{Colors.UNDERLINE}{Colors.WARNING}Current Location: {player.location.name}{Colors.ENDC}')
             prompt = input(
                 f'\nEnter Command or type "help" for a list of commands: ')
             # exit prompt
@@ -106,7 +106,7 @@ while True:
                     player_approaches(player)
             # handles east navigation
             elif prompt.lower() == "e":
-                print(f'{Colors.HEADER}Navigating...... {Colors.ENDC}')
+                print(f'{Colors.HEADER}Navigating...... \n{Colors.ENDC}')
                 if not player.location.e_to:
                     print('You see nothing interesting eastward..')
                 else:
@@ -114,7 +114,7 @@ while True:
                     player_approaches(player)
             # handles south navigation
             elif prompt.lower() == "s":
-                print(f'{Colors.HEADER}Navigating...... {Colors.ENDC}')
+                print(f'{Colors.HEADER}Navigating...... \n{Colors.ENDC}')
                 if not player.location.s_to:
                     print('You see nothing interesting eastward..')
                 else:
@@ -122,7 +122,7 @@ while True:
                     player_approaches(player)
             # handles west navigation
             elif prompt.lower() == "w":
-                print(f'{Colors.HEADER}Navigating...... {Colors.ENDC}')
+                print(f'{Colors.HEADER}Navigating...... \n{Colors.ENDC}')
                 if not player.location.w_to:
                     print('You see nothing interesting eastward..')
                 else:
