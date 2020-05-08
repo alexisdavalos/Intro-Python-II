@@ -33,7 +33,7 @@ class Player:
 
     # pickup all items
     def pickUpAll(self, items):
-        self.inventory = self.inventory.extend(items)
+        self.inventory.extend(items)
         print(f'\nYou place the {items} in your inventory')
         print(f'{self.inventory}\n')
 

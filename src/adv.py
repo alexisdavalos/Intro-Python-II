@@ -78,6 +78,7 @@ def printError():
 def printCommands():
     commands = {
         'help': 'displays a list of commands',
+        'n,e,s,w': 'to navigate in the cardinal direction',
         'q': 'command to quit instance',
         'player': 'displays player information',
         'search': 'searches the current location for items',
